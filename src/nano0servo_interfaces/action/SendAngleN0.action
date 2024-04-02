@@ -1,0 +1,37 @@
+# Goal
+int32 check
+int32 servo1
+int32 servo2
+int32 servo3
+int32 servo4
+int32 servo5
+int32 servo6
+int32 servo7
+int32 servo8
+int32 servo9
+int32 servo10
+int32 servo11
+int32 servo12
+int32 servo13
+int32 servo14
+int32 servo15
+int32 servo16
+int32 servo17
+int32 servo18
+---
+# Result
+bool send
+bool send1
+int32 check2
+int32 servoo10
+int32 servoo11
+int32 servoo12
+int32 servoo13
+int32 servoo14
+int32 servoo15
+int32 servoo16
+int32 servoo17
+int32 servoo18
+---
+#Feedback
+int64 number
