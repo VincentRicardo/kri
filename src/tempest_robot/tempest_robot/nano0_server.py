@@ -37,7 +37,7 @@ class SendAngle0ServerNode(Node):
         # ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
         # sleep(2)
         ser.reset_input_buffer()
-        kalimat = "{} {} {} {} {} {} {} {} {} {}".format(servo[0], servo[1], servo[2], servo[3], servo[4], servo[5], servo[6], servo[7], servo[8], servo[9])
+        kalimat = "{} {} {} {} {} {} {} {} {} {}".format(dat[0], dat[1], dat[2], dat[3], dat[4], dat[5], dat[6], dat[7], dat[8], dat[9])
         kalimat = "{} {} {} {} {} {} {} {} {} {}".format(check, servo1, servo2, servo3, servo4, servo5, servo6, servo7, servo8, servo9)
         ser.write(kalimat.encode())
         self.get_logger().info(kalimat)
