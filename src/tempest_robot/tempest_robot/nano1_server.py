@@ -18,6 +18,11 @@ class SendAngle1ServerNode(Node):
     
     def sending_angle0(self, goal_handle: ServerGoalHandle):
         #Get request
+        
+        dat[0] = goal_handle.request.servo[0]
+        for i in range(10,19):
+            dat[i-9] = goal_handle.request.servo[i]
+            
         check = goal_handle.request.check
         servo10 = goal_handle.request.servo10
         servo11 = goal_handle.request.servo11
@@ -34,6 +39,7 @@ class SendAngle1ServerNode(Node):
         # ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
         # sleep(2)
         ser.reset_input_buffer()
+        kalimat = "{} {} {} {} {} {} {} {} {} {}".format(dat[0], dat[1], dat[2], dat[3], dat[4], dat[5], dat[6], dat[7], dat[8], dat[9])
         kalimat = "{} {} {} {} {} {} {} {} {} {}".format(check, servo10, servo11, servo12, servo13, servo14, servo15, servo16, servo17, servo18)
         ser.write(kalimat.encode())
         self.get_logger().info(kalimat)
