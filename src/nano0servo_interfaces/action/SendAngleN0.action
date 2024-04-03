@@ -18,6 +18,7 @@ int32 servo15
 int32 servo16
 int32 servo17
 int32 servo18
+int8[20] servo
 ---
 # Result
 bool send
@@ -32,6 +33,7 @@ int32 servoo15
 int32 servoo16
 int32 servoo17
 int32 servoo18
+int8 servoo[10]
 ---
 #Feedback
 int64 number
