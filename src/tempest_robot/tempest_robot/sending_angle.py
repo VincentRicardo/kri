@@ -20,6 +20,10 @@ class SendAngle0ClientNode(Node):
 
         #Create a goal
         goal = SendAngleN0.Goal()
+        
+        for i in range(20):
+            goal.servo[i] = message.data[i]
+            
         goal.check = message.data[0]
         goal.servo1 = message.data[1]
         goal.servo2 = message.data[2]
@@ -55,6 +59,11 @@ class SendAngle0ClientNode(Node):
 
         goal = SendAngleN0.Goal()
         result = future.result().result
+        
+        goal.servo[0] = result.servoo[0]
+        for i in range(10, 19):
+            goal.servo[i] = result.servoo[i]
+            
         goal.check = result.check2
         goal.servo10 = result.servoo10
         goal.servo11 = result.servoo11
