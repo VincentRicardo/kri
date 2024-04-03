@@ -21,7 +21,7 @@ class SendAngle0ClientNode(Node):
         #Create a goal
         goal = SendAngleN0.Goal()
         
-        for i in range(20):
+        for i in range(19):
             goal.servo[i] = message.data[i]
             
         goal.check = message.data[0]
